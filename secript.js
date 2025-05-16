@@ -124,6 +124,10 @@ function loadTasks(){
     const tasks = getTasks();
     tasks.forEach(renderTasks);
 }
+function clearAllTasks(){
+  localStorage.removeItem("tasks");
+  document.getElementById("taskList").innerHTML = "";
+}
 
 // //add Enter key support
 // document.getElementById("taskInput").addEventListener("keypress", function(event) {
